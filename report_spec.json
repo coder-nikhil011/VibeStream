@@ -1,0 +1,97 @@
+{
+  "title": "Project Report: VibeStream Music Engine",
+  "author": "AI Project",
+  "elements": [
+    {
+      "type": "heading",
+      "text": "VibeStream: Hybrid Music Recommendation Engine",
+      "level": 1
+    },
+    {
+      "type": "paragraph",
+      "text": "VibeStream is an advanced music recommendation system designed to analyze song characteristics and user behavioral patterns to provide highly personalized music suggestions."
+    },
+    {
+      "type": "heading",
+      "text": "1. Introduction",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "The goal of this project is to bridge the gap between simple genre-based recommendations and deep acoustic analysis. VibeStream uses a hybrid approach, combining Content-Based Filtering (Acoustic Features) and Collaborative Filtering (User Behavior) to identify songs with similar 'vibes'."
+    },
+    {
+      "type": "heading",
+      "text": "2. System Architecture",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "The system is divided into two main phases: the Training Phase and the Inference (UI) Phase."
+    },
+    {
+      "type": "paragraph",
+      "text": "Training Phase: Handled by train.py. It cleans the Spotify dataset, normalizes features using MinMaxScaler, and creates a behavioral pivot matrix to simulate user interactions. The final output is a compact .pkl bundle."
+    },
+    {
+      "type": "paragraph",
+      "text": "Inference Phase: Handled by app.py. A Streamlit interface allows users to select a song, which then triggers a real-time Cosine Similarity calculation against the normalized acoustic vectors."
+    },
+    {
+      "type": "heading",
+      "text": "3. Methodology",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "The core of the recommendation engine is the Cosine Similarity metric. By representing each song as a vector of 11 acoustic features (Danceability, Energy, Key, Loudness, Mode, Speechiness, Acousticness, Instrumentalness, Liveness, Valence, Tempo), the system calculates the angle between vectors to determine similarity."
+    },
+    {
+      "type": "paragraph",
+      "text": "Hybrid Logic: The system supports three modes: Acoustic (pure vector similarity), Behavioral (trend-based), and Hybrid (a weighted blend of both)."
+    },
+    {
+      "type": "heading",
+      "text": "4. Technical Stack",
+      "level": 2
+    },
+    {
+      "type": "table",
+      "data": [
+        [
+          "Component",
+          "Technology Used"
+        ],
+        [
+          "Language",
+          "Python 3.x"
+        ],
+        [
+          "Frontend",
+          "Streamlit"
+        ],
+        [
+          "ML Library",
+          "Scikit-Learn"
+        ],
+        [
+          "Data Analysis",
+          "Pandas / NumPy"
+        ],
+        [
+          "Serialization",
+          "Pickle"
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "5. Conclusion",
+      "level": 2
+    },
+    {
+      "type": "paragraph",
+      "text": "VibeStream demonstrates the effectiveness of hybrid recommendation systems. By combining hard audio data with behavioral simulation, the engine provides a more nuanced and 'human' music discovery experience compared to traditional filtered lists."
+    }
+  ]
+}
