@@ -1,10 +1,10 @@
-# 🎵 VibeStream: Hybrid Music Recommendation Engine
+# VibeStream: Hybrid Music Recommendation Engine
 
 VibeStream is a professional-grade AI music discovery system. Unlike simple genre-based filters, VibeStream analyzes the mathematical "DNA" of a song (acoustic features) and blends it with simulated user behavior to suggest tracks that truly match the vibe of your current selection.
 
 ---
 
-## 📖 1. How It Works (The Technical Logic)
+## 1. How It Works (The Technical Logic)
 
 The project operates on a **Hybrid Filtering Approach**, combining two main AI strategies:
 
